@@ -4,9 +4,9 @@ What actually makes sense for this type of business:
 A local repair shop lives and dies on Google search — someone's laptop breaks, they Google "computer repair near me" and call the first result. That means your priority should be:
 
 
-Google Business Profile — free, and arguably more important than your website for local trade. Gets you on Maps, shows your hours, collects reviews.
-A simple static site on GitHub Pages (like what I've built you) — free hosting, you own it completely, loads fast.
-Stripe Payment Links for taking deposits or upfront payment — free to set up, you just pay the ~1.7% + 30c per transaction fee when someone actually pays you.
+- Google Business Profile — free, and arguably more important than your website for local trade. Gets you on Maps, shows your hours, collects reviews.
+- A simple static site on GitHub Pages (like what I've built you) — free hosting, you own it completely, loads fast.
+- Stripe Payment Links for taking deposits or upfront payment — free to set up, you just pay the ~1.7% + 30c per transaction fee when someone actually pays you.
 
 
 Here's the rebuilt page — this time designed specifically for a local Australian repair business. The key changes from the previous version:
