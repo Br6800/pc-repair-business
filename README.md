@@ -1,6 +1,4 @@
 # pc-repair-business
-What actually makes sense for this type of business:
-
 A local repair shop lives and dies on Google search — someone's laptop breaks, they Google "computer repair near me" and call the first result. That means your priority should be:
 
 
@@ -9,10 +7,7 @@ A local repair shop lives and dies on Google search — someone's laptop breaks,
 - Stripe Payment Links for taking deposits or upfront payment — free to set up, you just pay the ~1.7% + 30c per transaction fee when someone actually pays you.
 
 
-Here's the rebuilt page — this time designed specifically for a local Australian repair business. The key changes from the previous version:
-
-
-What's different and why:
+Features:
 
 
 Phone number is prominent everywhere — top bar, nav, hero, and contact section. Local service customers call first, browse second.
@@ -27,4 +22,4 @@ Phone number is prominent everywhere — top bar, nav, hero, and contact section
 
 
 To go live, replace all the placeholders:
-YOUR-PHONE, YOUR-EMAIL, YOUR_STRIPE_*_LINK, YOUR_GOOGLE_BUSINESS_LINK, and all the [Your Suburb] / [City] tags.
+Company_Name YOUR-PHONE, YOUR-EMAIL, YOUR_STRIPE_*_LINK, YOUR_GOOGLE_BUSINESS_LINK, and all the [Your Suburb] / [City] tags.
