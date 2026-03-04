@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SEO & LOCAL SEARCH  ← edit these for your real details
+       ═══════════════════════════════════════════════════════════ -->
+  <title>TechFix Pro — Computer Repair in [Your Suburb], [City]</title>
+  <meta name="description" content="Local computer repair in [Suburb], [City]. Same-day service, no fix no fee. Virus removal, screen replacement, data recovery & more. Call [YOUR NUMBER]."/>
+  <meta name="keywords"    content="computer repair [suburb], laptop repair [city], PC fix near me, virus removal [suburb]"/>
+
+  <!-- Open Graph (for when someone shares your link) -->
+  <meta property="og:title"       content="TechFix Pro — Computer Repair"/>
+  <meta property="og:description" content="Fast, local computer repair. Same-day service. No fix, no fee."/>
+  <meta property="og:type"        content="website"/>
+
+  <!-- Local Business schema — helps Google understand you're local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TechFix Pro",
+    "description": "Professional computer repair services",
+    "telephone": "[YOUR-PHONE]",
+    "email": "[YOUR-EMAIL]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[Your Street]",
+      "addressLocality": "[Your Suburb]",
+      "addressRegion": "[State]",
+      "postalCode": "[Postcode]",
+      "addressCountry": "AU"
+    },
+    "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-14:00",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --ink:     #0c0c10;
+      --paper:   #f5f4f0;
+      --mid:     #e8e6e0;
+      --muted:   #888078;
+      --accent:  #d63f1f;
+      --blue:    #1a4fff;
+      --white:   #ffffff;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body:    'Barlow', sans-serif;
+      --max: 1080px;
+      --r: 3px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ── ANNOUNCEMENT BAR ─────────────────────────────────────── */
+    .announce {
+      background: var(--accent);
+      color: var(--white);
+      text-align: center;
+      padding: 9px 16px;
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+    }
+    .announce a { color: inherit; text-decoration: underline; }
+
+    /* ── NAV ──────────────────────────────────────────────────── */
+    header {
+      background: var(--ink);
+      position: sticky; top: 0; z-index: 60;
+    }
+    .nav {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 58px;
+    }
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.45rem; font-weight: 900;
+      color: var(--white); text-decoration: none;
+      letter-spacing: .02em;
+    }
+    .logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 6px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.65);
+      text-decoration: none; font-size: .85rem; font-weight: 500;
+      padding: 6px 12px; border-radius: var(--r);
+      transition: color .15s, background .15s;
+    }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,.08); }
+    .nav-phone {
+      color: var(--white); font-weight: 700;
+      font-size: .9rem; text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .nav-phone:hover { color: var(--accent); }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      background: var(--ink);
+      padding: 64px 24px 72px;
+      position: relative; overflow: hidden;
+    }
+    /* subtle halftone texture */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    .hero-inner {
+      max-width: var(--max); margin: 0 auto;
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 48px; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: .78rem; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: var(--r);
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 900; line-height: .95;
+      color: var(--white);
+      letter-spacing: -.01em;
+      margin-bottom: 22px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-sub {
+      color: rgba(255,255,255,.6);
+      font-size: 1.05rem; font-weight: 400;
+      max-width: 440px; margin-bottom: 36px;
+      line-height: 1.65;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* CTA card */
+    .hero-card {
+      background: var(--white);
+      border-radius: 6px;
+      padding: 32px 28px;
+      min-width: 260px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .hero-card .label { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .hero-card .price { font-family: var(--font-display); font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+    .hero-card .price-sub { font-size: .82rem; color: var(--muted); margin-bottom: 22px; }
+    .hero-card .divider { border: none; border-top: 1px solid var(--mid); margin: 20px 0; }
+    .hero-card .trust-line { font-size: .8rem; color: var(--muted); margin-top: 12px; }
+
+    /* ── BUTTONS ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 700; font-size: .92rem;
+      padding: 13px 26px; border-radius: var(--r);
+      text-decoration: none; cursor: pointer; border: none;
+      transition: transform .12s, opacity .15s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-red   { background: var(--accent); color: var(--white); }
+    .btn-white { background: var(--white);  color: var(--ink); }
+    .btn-dark  { background: var(--ink);    color: var(--white); }
+    .btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: var(--white); opacity: 1; }
+    .btn-lg { padding: 15px 34px; font-size: 1rem; }
+    .btn-block { display: block; width: 100%; text-align: center; }
+
+    /* ── TRUST STRIP ──────────────────────────────────────────── */
+    .trust-strip {
+      background: var(--accent);
+      padding: 0;
+    }
+    .trust-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 9px;
+      padding: 14px 28px;
+      border-right: 1px solid rgba(255,255,255,.2);
+      font-size: .82rem; font-weight: 700;
+      color: var(--white);
+      letter-spacing: .02em;
+    }
+    .trust-item:last-child { border-right: none; }
+
+    /* ── SECTION SHARED ───────────────────────────────────────── */
+    .section { padding: 72px 24px; }
+    .section-alt { background: var(--white); }
+    .section-dark { background: var(--ink); color: var(--white); }
+    .sh { /* section header */
+      margin-bottom: 44px;
+    }
+    .sh .eyebrow {
+      font-family: var(--font-display);
+      font-size: .78rem; font-weight: 800;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px;
+    }
+    .sh h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900; letter-spacing: -.01em;
+      line-height: 1.05; margin-bottom: 10px;
+    }
+    .sh p { color: var(--muted); font-size: .97rem; font-weight: 400; max-width: 480px; }
+    .sh.center { text-align: center; }
+    .sh.center p { margin: 0 auto; }
+    .sh.light h2 { color: var(--white); }
+    .sh.light p  { color: rgba(255,255,255,.55); }
+
+    /* ── SERVICES ─────────────────────────────────────────────── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2px;
+      background: var(--mid);
+      border: 2px solid var(--mid);
+    }
+    .svc {
+      background: var(--white);
+      padding: 32px 26px;
+      transition: background .15s;
+    }
+    .svc:hover { background: var(--paper); }
+    .svc-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .svc h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px; letter-spacing: .01em; }
+    .svc p  { color: var(--muted); font-size: .88rem; line-height: 1.65; }
+    .svc-price { display: inline-block; margin-top: 14px; font-size: .8rem; font-weight: 700; color: var(--accent); background: rgba(214,63,31,.08); padding: 3px 10px; border-radius: var(--r); }
+
+    /* ── HOW IT WORKS ─────────────────────────────────────────── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0;
+      counter-reset: steps;
+    }
+    .step {
+      padding: 36px 28px;
+      border-right: 1px solid rgba(255,255,255,.1);
+      counter-increment: steps;
+      position: relative;
+    }
+    .step:last-child { border-right: none; }
+    .step::before {
+      content: counter(steps, decimal-leading-zero);
+      font-family: var(--font-display);
+      font-size: 3.5rem; font-weight: 900;
+      color: rgba(255,255,255,.08);
+      line-height: 1;
+      display: block; margin-bottom: 16px;
+    }
+    .step h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; color: var(--white); }
+    .step p  { font-size: .87rem; color: rgba(255,255,255,.55); line-height: 1.65; }
+
+    /* ── PRICING ──────────────────────────────────────────────── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .pc {
+      border: 2px solid var(--mid);
+      border-radius: 6px;
+      padding: 32px 28px;
+      background: var(--white);
+      position: relative;
+    }
+    .pc.pop { border-color: var(--accent); }
+    .pop-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--accent); color: var(--white);
+      font-family: var(--font-display);
+      font-size: .72rem; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 4px 16px; border-radius: 100px;
+      white-space: nowrap;
+    }
+    .pc-name  { font-family: var(--font-display); font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .pc-price { font-family: var(--font-display); font-size: 2.8rem; font-weight: 900; letter-spacing: -.02em; margin-bottom: 4px; }
+    .pc-desc  { font-size: .84rem; color: var(--muted); margin-bottom: 24px; }
+    .pc-list  { list-style: none; margin-bottom: 28px; }
+    .pc-list li { font-size: .88rem; padding: 8px 0; border-bottom: 1px solid var(--mid); display: flex; align-items: flex-start; gap: 9px; }
+    .pc-list li::before { content: '✓'; color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .pc-list li.no { color: var(--muted); }
+    .pc-list li.no::before { content: '–'; color: var(--mid); }
+
+    /* ── GOOGLE CTA ───────────────────────────────────────────── */
+    .google-cta {
+      background: #fff;
+      border: 2px solid var(--mid);
+      border-radius: 8px;
+      padding: 36px 32px;
+      display: flex; align-items: center;
+      gap: 32px; flex-wrap: wrap;
+      max-width: var(--max); margin: 0 auto;
+    }
+    .google-stars { display: flex; align-items: center; gap: 8px; }
+    .google-stars .g-logo { font-size: 1.5rem; }
+    .google-stars .stars { color: #f59e0b; font-size: 1.2rem; letter-spacing: 2px; }
+    .google-stars .count { font-size: .85rem; color: var(--muted); }
+    .google-text { flex: 1; min-width: 200px; }
+    .google-text h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; margin-bottom: 4px; }
+    .google-text p  { font-size: .87rem; color: var(--muted); }
+
+    /* ── REVIEWS ──────────────────────────────────────────────── */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .rv {
+      border: 2px solid var(--mid);
+      border-radius: 6px;
+      padding: 26px 22px;
+      background: var(--white);
+    }
+    .rv-stars { color: #f59e0b; font-size: .88rem; margin-bottom: 12px; }
+    .rv-text  { font-size: .9rem; line-height: 1.7; margin-bottom: 18px; color: var(--ink); }
+    .rv-author { display: flex; align-items: center; gap: 10px; padding-top: 16px; border-top: 1px solid var(--mid); }
+    .rv-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .78rem; color: var(--white); flex-shrink: 0; }
+    .rv-name  { font-size: .85rem; font-weight: 700; }
+    .rv-loc   { font-size: .76rem; color: var(--muted); }
+
+    /* ── FAQ ──────────────────────────────────────────────────── */
+    .faq-grid { max-width: 700px; margin: 0 auto; }
+    .faq-item { border-bottom: 2px solid var(--mid); }
+    .faq-btn {
+      width: 100%; background: none; border: none;
+      color: var(--ink); text-align: left;
+      padding: 19px 0; font-family: var(--font-body);
+      font-size: .95rem; font-weight: 600;
+      cursor: pointer; display: flex;
+      justify-content: space-between; align-items: center; gap: 14px;
+    }
+    .faq-icon { flex-shrink: 0; font-size: 1.2rem; color: var(--accent); transition: transform .25s; font-style: normal; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-ans { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .25s; color: var(--muted); font-size: .9rem; line-height: 1.75; }
+    .faq-item.open .faq-ans { max-height: 200px; padding-bottom: 18px; }
+
+    /* ── CONTACT / BOOKING ────────────────────────────────────── */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: start;
+      max-width: var(--max); margin: 0 auto;
+    }
+    .contact-method {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .contact-method:last-child { border-bottom: none; }
+    .c-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .c-label { font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 4px; }
+    .c-val { font-size: 1.05rem; font-weight: 600; color: var(--white); }
+    .c-val a { color: inherit; text-decoration: none; }
+    .c-val a:hover { color: var(--accent); }
+    .c-note { font-size: .8rem; color: rgba(255,255,255,.4); margin-top: 2px; }
+
+    /* stripe CTA card */
+    .stripe-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 36px 32px;
+      color: var(--ink);
+    }
+    .stripe-card h3 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; margin-bottom: 8px; }
+    .stripe-card p  { color: var(--muted); font-size: .9rem; margin-bottom: 28px; line-height: 1.65; }
+    .stripe-options { display: flex; flex-direction: column; gap: 12px; }
+    .stripe-opt {
+      display: flex; align-items: center; justify-content: space-between;
+      border: 2px solid var(--mid); border-radius: var(--r);
+      padding: 14px 18px; text-decoration: none; color: var(--ink);
+      transition: border-color .15s, background .15s;
+    }
+    .stripe-opt:hover { border-color: var(--accent); background: rgba(214,63,31,.04); }
+    .stripe-opt-left .opt-name  { font-weight: 700; font-size: .95rem; }
+    .stripe-opt-left .opt-desc  { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+    .stripe-opt-price { font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: var(--accent); }
+    .secure-note { font-size: .75rem; color: var(--muted); text-align: center; margin-top: 16px; }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: #07070a;
+      padding: 40px 24px;
+      color: rgba(255,255,255,.45);
+    }
+    .foot {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .foot-logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; color: var(--white); }
+    .foot-logo em { color: var(--accent); font-style: normal; }
+    .foot-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .foot-links a { color: rgba(255,255,255,.4); text-decoration: none; font-size: .82rem; transition: color .15s; }
+    .foot-links a:hover { color: var(--white); }
+    .foot-copy { font-size: .78rem; }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 820px) {
+      .hero-inner    { grid-template-columns: 1fr; }
+      .hero-card     { display: none; }
+      .contact-grid  { grid-template-columns: 1fr; }
+      .nav-links     { display: none; }
+      .trust-item    { border-right: none; border-bottom: 1px solid rgba(255,255,255,.2); flex: 1 0 45%; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2.6rem; }
+      .section { padding: 52px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR — swap for your current offer -->
+<div class="announce">
+  🔧 Same-day service available in [Your Suburb] &nbsp;·&nbsp; Call <a href="tel:YOUR-PHONE">YOUR-PHONE</a> to book
+</div>
+
+<!-- NAV -->
+<header>
+  <div class="nav">
+    <a href="#" class="logo">Tech<em>Fix</em> Pro</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:YOUR-PHONE" class="nav-phone">📞 YOUR-PHONE</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">📍 [Your Suburb], [City]</div>
+      <h1>Computer<br/>Repair<br/><span>Done Right.</span></h1>
+      <p class="hero-sub">Fast, honest repairs for laptops and desktops. Same-day service available. No fix, no fee — guaranteed.</p>
+      <div class="hero-actions">
+        <a href="YOUR_STRIPE_LINK" class="btn btn-red btn-lg">Book a Repair</a>
+        <a href="tel:YOUR-PHONE" class="btn btn-white btn-lg">Call Now</a>
+      </div>
+    </div>
+
+    <!-- Right-side card — price anchor, drives Stripe booking -->
+    <div class="hero-card">
+      <div class="label">Most Popular</div>
+      <div class="price">$129</div>
+      <div class="price-sub">Standard Repair Service</div>
+      <a href="YOUR_STRIPE_LINK" class="btn btn-red btn-block">Book & Pay Now</a>
+      <hr class="divider"/>
+      <div style="text-align:left;">
+        <div style="font-size:.82rem; margin-bottom:8px; font-weight:600;">What's included:</div>
+        <ul style="list-style:none; font-size:.82rem; color:#555; line-height:1.9;">
+          <li>✓ Full diagnostic</li>
+          <li>✓ One repair (screen, virus, SSD…)</li>
+          <li>✓ 24hr turnaround</li>
+          <li>✓ 90-day guarantee</li>
+        </ul>
+      </div>
+      <div class="trust-line">🔒 Secure payment via Stripe</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">✓ No Fix, No Fee</div>
+    <div class="trust-item">⚡ Same-Day Service</div>
+    <div class="trust-item">🛡 90-Day Guarantee</div>
+    <div class="trust-item">📍 Local — [Your Suburb]</div>
+    <div class="trust-item">⭐ 500+ Reviews</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow">Services</div>
+      <h2>What We Fix</h2>
+      <p>All makes and models. Laptops, desktops, Macs and PCs.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc">
+        <span class="svc-icon">💻</span>
+        <h3>Screen Replacement</h3>
+        <p>Cracked or dead screens replaced with quality panels. Most laptops done same day.</p>
+        <span class="svc-price">from $99</span>
+      </div>
+      <div class="svc">
+        <span class="svc-icon">🦠</span>
+        <h3>Virus Removal</h3>
+        <p>Full removal of viruses, malware and ransomware. Security hardening included.</p>
+        <span class="svc-price">from $79</span>
+      </div>
+      <div class="svc">
+        <span class="svc-icon">⚡</span>
+        <h3>Speed Upgrades</h3>
+        <p>SSD replacement and RAM upgrades. A slow machine can feel brand new.</p>
+        <span class="svc-price">from $119</span>
+      </div>
+      <div class="svc">
+        <span class="svc-icon">🔋</span>
+        <h3>Battery Replacement</h3>
+        <p>Laptop dying fast? Genuine-grade replacement batteries with 12-month warranty.</p>
+        <span class="svc-price">from $89</span>
+      </div>
+      <div class="svc">
+        <span class="svc-icon">💾</span>
+        <h3>Data Recovery</h3>
+        <p>Failed drives, deleted files, corrupted partitions. We recover what matters.</p>
+        <span class="svc-price">from $149</span>
+      </div>
+      <div class="svc">
+        <span class="svc-icon">🌐</span>
+        <h3>Network & Wi-Fi</h3>
+        <p>Home and office networks, routers, extenders, and VPN setup.</p>
+        <span class="svc-price">from $99</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-dark" id="how">
+  <div class="wrap">
+    <div class="sh light">
+      <div class="eyebrow">How It Works</div>
+      <h2>Simple as That</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Book Online or Call</h3>
+        <p>Pay a deposit via Stripe or just call to arrange drop-off. No upfront commitment needed.</p>
+      </div>
+      <div class="step">
+        <h3>Free Diagnosis</h3>
+        <p>We assess your device and call you with a clear quote before touching anything.</p>
+      </div>
+      <div class="step">
+        <h3>We Fix It</h3>
+        <p>Most repairs done within 24 hours. You'll get a text when it's ready to collect.</p>
+      </div>
+      <div class="step">
+        <h3>Pick Up & Pay</h3>
+        <p>Pay only when you're happy. Card, cash, or bank transfer all accepted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section section-alt" id="pricing">
+  <div class="wrap">
+    <div class="sh center">
+      <div class="eyebrow">Pricing</div>
+      <h2>Flat-Rate Repairs</h2>
+      <p>No hourly rates, no surprises. You know the price before we start.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pc">
+        <div class="pc-name">Basic</div>
+        <div class="pc-price">$49</div>
+        <div class="pc-desc">Software fixes and tune-ups.</div>
+        <ul class="pc-list">
+          <li>Virus & malware removal</li>
+          <li>OS cleanup & optimisation</li>
+          <li>Software install / setup</li>
+          <li>48-hour turnaround</li>
+          <li class="no">Hardware repairs</li>
+          <li class="no">On-site visit</li>
+        </ul>
+        <a href="YOUR_STRIPE_BASIC_LINK" class="btn btn-outline btn-block">Book Now</a>
+      </div>
+
+      <div class="pc pop">
+        <div class="pop-badge">Most Popular</div>
+        <div class="pc-name">Standard</div>
+        <div class="pc-price">$129</div>
+        <div class="pc-desc">Hardware + software, most repairs covered.</div>
+        <ul class="pc-list">
+          <li>Everything in Basic</li>
+          <li>Full hardware diagnostic</li>
+          <li>Screen or battery replacement</li>
+          <li>RAM or SSD upgrade</li>
+          <li>24-hour turnaround</li>
+          <li class="no">On-site visit</li>
+        </ul>
+        <a href="YOUR_STRIPE_STANDARD_LINK" class="btn btn-red btn-block">Book Now</a>
+      </div>
+
+      <div class="pc">
+        <div class="pc-name">Pro</div>
+        <div class="pc-price">$249</div>
+        <div class="pc-desc">Full service + on-site + data recovery.</div>
+        <ul class="pc-list">
+          <li>Everything in Standard</li>
+          <li>On-site home or office visit</li>
+          <li>Data recovery (up to 500GB)</li>
+          <li>Network & Wi-Fi setup</li>
+          <li>Same-day turnaround</li>
+          <li>30-day follow-up support</li>
+        </ul>
+        <a href="YOUR_STRIPE_PRO_LINK" class="btn btn-outline btn-block">Book Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEWS PROMPT -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="google-cta" style="margin-bottom:36px;">
+      <div class="google-stars">
+        <span class="g-logo">G</span>
+        <span class="stars">★★★★★</span>
+        <span class="count">4.9 · 200+ reviews</span>
+      </div>
+      <div class="google-text">
+        <h3>Find us on Google Maps</h3>
+        <p>Search "TechFix Pro [Your Suburb]" or click below to see our reviews and get directions.</p>
+      </div>
+      <!-- Replace with your actual Google Business Profile link -->
+      <a href="YOUR_GOOGLE_BUSINESS_LINK" target="_blank" class="btn btn-dark">View on Google →</a>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="rv">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"Laptop was completely dead after a Windows update. Had it back the next morning running better than ever. Couldn't recommend more."</p>
+        <div class="rv-author"><div class="rv-avatar">JM</div><div><div class="rv-name">James M.</div><div class="rv-loc">📍 [Your Suburb]</div></div></div>
+      </div>
+      <div class="rv">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"Recovered photos from a hard drive I thought were gone forever. Honest, fast, and genuinely cared about getting it right."</p>
+        <div class="rv-author"><div class="rv-avatar">SR</div><div><div class="rv-name">Sarah R.</div><div class="rv-loc">📍 [Nearby Suburb]</div></div></div>
+      </div>
+      <div class="rv">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"Called at 9am with a broken screen and had it back by 3pm the same day. Pricing was upfront and the repair has held perfectly."</p>
+        <div class="rv-author"><div class="rv-avatar">DK</div><div><div class="rv-name">David K.</div><div class="rv-loc">📍 [Nearby Suburb]</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+  <div class="wrap">
+    <div class="sh center">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-grid">
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">How long does a repair take?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">Most repairs are done within 24 hours. Simple software jobs are often same-day. We'll give you an exact timeline after the free diagnosis — before any work begins.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">What does "no fix, no fee" actually mean?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">If we can't fix your device, you pay nothing — not even a diagnostic fee. We'll tell you honestly what's wrong and what your options are, at no cost.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">Do I need to drop it off or can you come to me?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">Drop-off is available at our [Suburb] workshop. On-site visits are included in the Pro plan, or can be added to any plan for a small travel fee. Mail-in is also fine.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">Is my data safe during the repair?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">Yes. We never wipe or access personal data without your explicit permission. We'll advise you on backup options before any work that could affect storage.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">Which brands and systems do you support?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">All major brands — Dell, HP, Lenovo, Asus, Acer, Apple MacBook, Surface, and custom builds. Windows 10/11, macOS, and most Linux distros.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">Do you offer a warranty?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">All repairs carry a 90-day workmanship guarantee. Replacement parts have a 12-month warranty. If something we fixed fails within that period, we fix it free.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & BOOKING -->
+<section class="section section-dark" id="contact">
+  <div class="contact-grid">
+
+    <div>
+      <div class="sh light">
+        <div class="eyebrow">Get in Touch</div>
+        <h2>Book a Repair or Just Ask</h2>
+      </div>
+      <div class="contact-method">
+        <div class="c-icon">📞</div>
+        <div>
+          <div class="c-label">Phone</div>
+          <div class="c-val"><a href="tel:YOUR-PHONE">YOUR-PHONE</a></div>
+          <div class="c-note">Mon–Fri 8am–6pm · Sat 9am–2pm</div>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="c-icon">✉️</div>
+        <div>
+          <div class="c-label">Email</div>
+          <div class="c-val"><a href="mailto:YOUR-EMAIL">YOUR-EMAIL</a></div>
+          <div class="c-note">Usually respond within a few hours</div>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="c-icon">📍</div>
+        <div>
+          <div class="c-label">Location</div>
+          <div class="c-val">[Your Street], [Suburb] [Postcode]</div>
+          <div class="c-note">Drop-off & collection available</div>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="c-icon">🗺️</div>
+        <div>
+          <div class="c-label">Google Maps</div>
+          <div class="c-val"><a href="YOUR_GOOGLE_BUSINESS_LINK" target="_blank">Find us on Google →</a></div>
+          <div class="c-note">Leave a review while you're there 🙏</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stripe payment options -->
+    <div class="stripe-card">
+      <h3>Book & Pay Online</h3>
+      <p>Secure payment via Stripe. Pay a deposit now and we'll confirm your booking by phone within the hour.</p>
+      <div class="stripe-options">
+        <a href="YOUR_STRIPE_BASIC_LINK" class="stripe-opt">
+          <div class="stripe-opt-left">
+            <div class="opt-name">Basic — Software Fix</div>
+            <div class="opt-desc">Virus removal, tune-up, software</div>
+          </div>
+          <div class="stripe-opt-price">$49</div>
+        </a>
+        <a href="YOUR_STRIPE_STANDARD_LINK" class="stripe-opt">
+          <div class="stripe-opt-left">
+            <div class="opt-name">Standard — Hardware + Software</div>
+            <div class="opt-desc">Screen, battery, SSD, virus</div>
+          </div>
+          <div class="stripe-opt-price">$129</div>
+        </a>
+        <a href="YOUR_STRIPE_PRO_LINK" class="stripe-opt">
+          <div class="stripe-opt-left">
+            <div class="opt-name">Pro — Full Service + On-Site</div>
+            <div class="opt-desc">Everything + home visit + data recovery</div>
+          </div>
+          <div class="stripe-opt-price">$249</div>
+        </a>
+      </div>
+      <div class="secure-note">🔒 Secure checkout · Powered by Stripe · No fix, no fee applies</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot">
+    <div class="foot-logo">Tech<em>Fix</em> Pro</div>
+    <div class="foot-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="foot-copy">© 2026 TechFix Pro · [Your Suburb], [City] · ABN 00 000 000 000</div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!open) item.classList.add('open');
+  }
+</script>
+
+</body>
+</html>
