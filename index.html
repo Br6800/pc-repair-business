@@ -7,12 +7,12 @@
   <!-- ═══════════════════════════════════════════════════════════
        SEO & LOCAL SEARCH  ← edit these for your real details
        ═══════════════════════════════════════════════════════════ -->
-  <title>Company_Name — Computer Repair in [Your Suburb], [City]</title>
+  <title>company_name_placeholder — Computer Repair in [Your Suburb], [City]</title>
   <meta name="description" content="Local computer repair in [Suburb], [City]. Same-day service, no fix no fee. Virus removal, screen replacement, data recovery & more. Call [YOUR NUMBER]."/>
   <meta name="keywords"    content="computer repair [suburb], laptop repair [city], PC fix near me, virus removal [suburb]"/>
 
   <!-- Open Graph (for when someone shares your link) -->
-  <meta property="og:title"       content="Company_Name — Computer Repair"/>
+  <meta property="og:title"       content="company_name_placeholder — Computer Repair"/>
   <meta property="og:description" content="Fast, local computer repair. Same-day service. No fix, no fee."/>
   <meta property="og:type"        content="website"/>
 
@@ -21,7 +21,7 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Company_Name",
+    "name": "company_name_placeholder",
     "description": "Professional computer repair services",
     "telephone": "[YOUR-PHONE]",
     "email": "[YOUR-EMAIL]",
@@ -253,6 +253,91 @@
     .svc p  { color: var(--muted); font-size: .88rem; line-height: 1.65; }
     .svc-price { display: inline-block; margin-top: 14px; font-size: .8rem; font-weight: 700; color: var(--accent); background: rgba(214,63,31,.08); padding: 3px 10px; border-radius: var(--r); }
 
+    /* ── PARTS OPTIONS (new) ──────────────────────────────────── */
+    .parts-section {
+      background: var(--paper);
+      border: 2px solid var(--mid);
+      border-radius: 8px;
+      padding: 36px 32px;
+      margin-top: 32px;
+    }
+    .parts-section-header {
+      margin-bottom: 24px;
+    }
+    .parts-section-header .eyebrow {
+      font-family: var(--font-display);
+      font-size: .75rem; font-weight: 800;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 6px;
+    }
+    .parts-section-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem; font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .parts-section-header p {
+      font-size: .88rem; color: var(--muted);
+    }
+    .parts-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .parts-opt {
+      border: 2px solid var(--mid);
+      border-radius: 6px;
+      background: var(--white);
+      padding: 26px 24px;
+      position: relative;
+    }
+    .parts-opt.recommended {
+      border-color: var(--accent);
+    }
+    .parts-opt-badge {
+      position: absolute; top: -13px; left: 20px;
+      background: var(--accent); color: var(--white);
+      font-family: var(--font-display);
+      font-size: .68rem; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 3px 12px; border-radius: 100px;
+    }
+    .parts-opt-letter {
+      font-family: var(--font-display);
+      font-size: 2.2rem; font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .parts-opt h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .parts-opt p {
+      font-size: .86rem; color: var(--muted);
+      line-height: 1.65; margin-bottom: 14px;
+    }
+    .parts-opt-detail {
+      list-style: none;
+      font-size: .82rem;
+      color: var(--ink);
+    }
+    .parts-opt-detail li {
+      padding: 5px 0;
+      border-bottom: 1px solid var(--mid);
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .parts-opt-detail li:last-child { border-bottom: none; }
+    .parts-opt-detail .tick { color: #16a34a; font-weight: 700; flex-shrink: 0; }
+    .parts-opt-detail .cross { color: #dc2626; font-weight: 700; flex-shrink: 0; }
+    .parts-note {
+      margin-top: 18px;
+      font-size: .8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .parts-note a { color: var(--accent); text-decoration: none; }
+
     /* ── HOW IT WORKS ─────────────────────────────────────────── */
     .steps {
       display: grid;
@@ -361,7 +446,7 @@
     .faq-icon { flex-shrink: 0; font-size: 1.2rem; color: var(--accent); transition: transform .25s; font-style: normal; }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
     .faq-ans { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .25s; color: var(--muted); font-size: .9rem; line-height: 1.75; }
-    .faq-item.open .faq-ans { max-height: 200px; padding-bottom: 18px; }
+    .faq-item.open .faq-ans { max-height: 260px; padding-bottom: 18px; }
 
     /* ── CONTACT / BOOKING ────────────────────────────────────── */
     .contact-grid {
@@ -428,6 +513,7 @@
       .contact-grid  { grid-template-columns: 1fr; }
       .nav-links     { display: none; }
       .trust-item    { border-right: none; border-bottom: 1px solid rgba(255,255,255,.2); flex: 1 0 45%; justify-content: center; }
+      .parts-options { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .hero h1 { font-size: 2.6rem; }
@@ -445,7 +531,7 @@
 <!-- NAV -->
 <header>
   <div class="nav">
-    <a href="#" class="logo">Tech<em>Fix</em> Pro</a>
+    <a href="#" class="logo">company_name_placeholder</a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
@@ -515,25 +601,29 @@
         <span class="svc-icon">💻</span>
         <h3>Screen Replacement</h3>
         <p>Cracked or dead screens replaced with quality panels. Most laptops done same day.</p>
-        <span class="svc-price">from $99</span>
+        <span class="svc-price">from $</span>
       </div>
       <div class="svc">
         <span class="svc-icon">🦠</span>
         <h3>Virus Removal</h3>
         <p>Full removal of viruses, malware and ransomware. Security hardening included.</p>
-        <span class="svc-price">from $79</span>
+        <span class="svc-price">from $</span>
       </div>
       <div class="svc">
         <span class="svc-icon">⚡</span>
-        <h3>Speed Upgrades</h3>
-        <p>SSD replacement and RAM upgrades. A slow machine can feel brand new.</p>
-        <span class="svc-price">from $119</span>
+        <h3>SSD &amp; RAM Upgrades</h3>
+        <p>A slow machine can feel brand 
+          new after a storage or memory upgrade. 
+          We offer two options — 
+          we can source the parts for you, 
+          or install parts you've already purchased. <a href="#parts-options" style="color:var(--accent); font-weight:600;">See how it works ↓</a></p>
+        <span class="svc-price">Labour from $</span>
       </div>
       <div class="svc">
         <span class="svc-icon">🔋</span>
         <h3>Battery Replacement</h3>
         <p>Laptop dying fast? Genuine-grade replacement batteries with 12-month warranty.</p>
-        <span class="svc-price">from $89</span>
+        <span class="svc-price">from $</span>
       </div>
       <div class="svc">
         <span class="svc-icon">💾</span>
@@ -543,11 +633,51 @@
       </div>
       <div class="svc">
         <span class="svc-icon">🌐</span>
-        <h3>Network & Wi-Fi</h3>
-        <p>Home and office networks, routers, extenders, and VPN setup.</p>
+        <h3>Network &amp; Wi-Fi</h3>
+        <p>Home and office networks, routers, 
+          extenders, and VPN setup.</p>
         <span class="svc-price">from $99</span>
       </div>
     </div>
+
+    <!-- PARTS OPTIONS EXPLAINER -->
+    <div class="parts-section" id="parts-options">
+      <div class="parts-section-header">
+        <div class="eyebrow">SSD &amp; RAM Upgrades</div>
+        <h3>How Would You Like to Handle Parts?</h3>
+        <p>We're flexible — pick the option that works best for you. Not sure what to buy? Just ask us before you order anything.</p>
+      </div>
+      <div class="parts-options">
+
+        <div class="parts-opt recommended">
+          <div class="parts-opt-badge">Most Popular</div>
+          <div class="parts-opt-letter">A</div>
+          <h4>We Source the Parts</h4>
+          <p>Tell us your device and what you need — we'll recommend the right part, order it, and install it. You pay for the part at cost plus a small sourcing fee, and a flat labour charge.</p>
+          <ul class="parts-opt-detail">
+            <li><span class="tick">✓</span> We guarantee part compatibility</li>
+            <li><span class="tick">✓</span> Parts covered by our 12-month warranty</li>
+            <li><span class="tick">✓</span> No risk of buying the wrong thing</li>
+            <li><span class="tick">✓</span> One simple quote covers everything</li>
+          </ul>
+        </div>
+
+        <div class="parts-opt">
+          <div class="parts-opt-letter">B</div>
+          <h4>You Supply the Part</h4>
+          <p>Already bought your own SSD or RAM? Bring it in and we'll install it for a flat labour fee. We'll check compatibility before we start — if there's an issue we'll let you know.</p>
+          <ul class="parts-opt-detail">
+            <li><span class="tick">✓</span> Lower total cost if you shop around</li>
+            <li><span class="tick">✓</span> Flat labour fee — no surprises</li>
+            <li><span class="cross">✗</span> Warranty covers labour only, not the part</li>
+            <li><span class="cross">✗</span> We can't be responsible for incompatible parts</li>
+          </ul>
+        </div>
+
+      </div>
+      <p class="parts-note">Not sure which option suits you? <a href="#contact">Get in touch</a> — we're happy to advise before you commit to anything.</p>
+    </div>
+
   </div>
 </section>
 
@@ -572,7 +702,7 @@
         <p>Most repairs done within 24 hours. You'll get a text when it's ready to collect.</p>
       </div>
       <div class="step">
-        <h3>Pick Up & Pay</h3>
+        <h3>Pick Up &amp; Pay</h3>
         <p>Pay only when you're happy. Card, cash, or bank transfer all accepted.</p>
       </div>
     </div>
@@ -592,11 +722,15 @@
       <div class="pc">
         <div class="pc-name">Basic</div>
         <div class="pc-price">$49</div>
-        <div class="pc-desc">Software fixes and tune-ups.</div>
+        <div class="pc-desc">Hardware Installation + 
+          Software fixes and tune-ups. Free diagnostic and quote. 
+          Choose any one of the following options:</div>
         <ul class="pc-list">
-          <li>Virus & malware removal</li>
-          <li>OS cleanup & optimisation</li>
+          <li>Virus &amp; malware removal</li>
+          <li>OS cleanup &amp; optimisation?</li>
           <li>Software install / setup</li>
+          <li>RAM and/or SSD upgrade B </li>
+          <li>Custom Setups for Linux</li>
           <li>48-hour turnaround</li>
           <li class="no">Hardware repairs</li>
           <li class="no">On-site visit</li>
@@ -608,12 +742,12 @@
         <div class="pop-badge">Most Popular</div>
         <div class="pc-name">Standard</div>
         <div class="pc-price">$129</div>
-        <div class="pc-desc">Hardware + software, most repairs covered.</div>
+        <div class="pc-desc">Hardware & software fixes, most repairs covered.</div>
         <ul class="pc-list">
-          <li>Everything in Basic</li>
+          <li>Any two services in Basic</li>
           <li>Full hardware diagnostic</li>
           <li>Screen or battery replacement</li>
-          <li>RAM or SSD upgrade</li>
+          <li>RAM and/or SSD upgrade A </li>
           <li>24-hour turnaround</li>
           <li class="no">On-site visit</li>
         </ul>
@@ -628,7 +762,7 @@
           <li>Everything in Standard</li>
           <li>On-site home or office visit</li>
           <li>Data recovery (up to 500GB)</li>
-          <li>Network & Wi-Fi setup</li>
+          <li>Network &amp; Wi-Fi setup</li>
           <li>Same-day turnaround</li>
           <li>30-day follow-up support</li>
         </ul>
@@ -650,7 +784,7 @@
       </div>
       <div class="google-text">
         <h3>Find us on Google Maps</h3>
-        <p>Search "Company_Name [Your Suburb]" or click below to see our reviews and get directions.</p>
+        <p>Search "company_name_placeholder [Your Suburb]" or click below to see our reviews and get directions.</p>
       </div>
       <!-- Replace with your actual Google Business Profile link -->
       <a href="YOUR_GOOGLE_BUSINESS_LINK" target="_blank" class="btn btn-dark">View on Google →</a>
@@ -698,6 +832,20 @@
         <div class="faq-ans">Drop-off is available at our [Suburb] workshop. On-site visits are included in the Pro plan, or can be added to any plan for a small travel fee. Mail-in is also fine.</div>
       </div>
       <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">For SSD/RAM upgrades — do I need to buy my own parts?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">You have two options. Option A: we source the right part for your device — you pay for the part plus a small sourcing fee, and our labour charge. This is the easiest route and the part is covered by our 12-month warranty. Option B: you supply your own part and we install it for a flat labour fee. We'll check compatibility before we start, but warranty on the part itself is your responsibility. Either way, we'll advise you before any work begins.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick=
+        "toggleFaq(this)">For SSD/RAM upgrades — Can I get both done at once?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">Yes, this is applicable for both options.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick=
+        "toggleFaq(this)">For SSD/RAM upgrades — Can I upgrade my PS4 SSD?<em class="faq-icon">+</em></button>
+        <div class="faq-ans">We only cover this for standard and pro plans; not basic.</div>
+      </div>
+      <div class="faq-item">
         <button class="faq-btn" onclick="toggleFaq(this)">Is my data safe during the repair?<em class="faq-icon">+</em></button>
         <div class="faq-ans">Yes. We never wipe or access personal data without your explicit permission. We'll advise you on backup options before any work that could affect storage.</div>
       </div>
@@ -707,7 +855,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="toggleFaq(this)">Do you offer a warranty?<em class="faq-icon">+</em></button>
-        <div class="faq-ans">All repairs carry a 90-day workmanship guarantee. Replacement parts have a 12-month warranty. If something we fixed fails within that period, we fix it free.</div>
+        <div class="faq-ans">All repairs carry a 90-day workmanship guarantee. Replacement parts sourced by us have a 12-month warranty. If something we fixed fails within that period, we fix it free.</div>
       </div>
 
     </div>
@@ -744,7 +892,7 @@
         <div>
           <div class="c-label">Location</div>
           <div class="c-val">[Your Street], [Suburb] [Postcode]</div>
-          <div class="c-note">Drop-off & collection available</div>
+          <div class="c-note">Drop-off &amp; collection available</div>
         </div>
       </div>
       <div class="contact-method">
@@ -759,7 +907,7 @@
 
     <!-- Stripe payment options -->
     <div class="stripe-card">
-      <h3>Book & Pay Online</h3>
+      <h3>Book &amp; Pay Online</h3>
       <p>Secure payment via Stripe. Pay a deposit now and we'll confirm your booking by phone within the hour.</p>
       <div class="stripe-options">
         <a href="YOUR_STRIPE_BASIC_LINK" class="stripe-opt">
@@ -793,7 +941,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="foot">
-    <div class="foot-logo">Tech<em>Fix</em> Pro</div>
+    <div class="foot-logo">company_<em>name</em>_placeholder</div>
     <div class="foot-links">
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
@@ -801,7 +949,7 @@
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="foot-copy">© 2026 Company_Name · [Your Suburb], [City] · ABN 00 000 000 000</div>
+    <div class="foot-copy">© 2026 company_name_placeholder · [Your Suburb], [City] · ABN 00 000 000 000</div>
   </div>
 </footer>
 
